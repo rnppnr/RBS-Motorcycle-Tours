@@ -429,11 +429,12 @@
                 </div>
               </div>
               <div class="container w-50">
-                <form>
+                <form onsubmit="return onButtonSubmit()">
                   <div class="mb-3">
                     <input
                       type="text"
                       name="name"
+                      id="name"
                       placeholder="Please enter your name"
                       class="form-control form-control-lg border-0"
                       style="background: #f6f0e4"
@@ -443,6 +444,7 @@
                     <input
                       type="email"
                       name="email"
+                      id="email"
                       placeholder="Please enter your email address"
                       class="form-control form-control-lg"
                       style="background: #f6f0e4"
@@ -452,6 +454,7 @@
                     <textarea
                       class="form-control form-control-lg"
                       name="message"
+                      id="message"
                       rows="4"
                       placeholder="Please enter your message"
                       style="background: #f6f0e4"
@@ -526,6 +529,27 @@
           </div>
         </div>
       </footer>
+
+      <dialog
+        id="submitMessage"
+        class="border-0 text-center rounded-4 shadow-lg"
+        style="background: #f6f0e4"
+      >
+        <p id="submitMessageText"></p>
+
+        <button
+          onclick="this.parentNode.close()"
+          class="btn mt-3 fs-5 fw-bold"
+          style="
+            background: #54bd83;
+            color: #f6f0e4;
+            width: 10rem;
+            border: none;
+          "
+        >
+          Close
+        </button>
+      </dialog>
     </main>
 
     <script src="./js/bootstrap.min.js"></script>
